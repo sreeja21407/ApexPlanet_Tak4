@@ -1,0 +1,119 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #b0c7cc; /* Tranquil blue */
+  margin: 0;
+  padding: 20px;
+  animation: slideUp 1s ease-out;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  animation: fadeIn 1.2s ease-in;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 10px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+select,
+input {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+select:focus,
+input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.product {
+  background: #e9ddec; /* Light lavender */
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, opacity 0.5s ease;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+  background-color: #f4eaf6;
+}
+
+.product h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.product p {
+  margin: 6px 0;
+  color: #444;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.logo img {
+  max-width: 120px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
